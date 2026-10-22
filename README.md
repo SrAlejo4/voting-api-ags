@@ -108,7 +108,7 @@ Respuesta de ejemplo de `/votes/statistics`:
 
 ### Capturas de las estadísticas
 
-> `![Estadísticas](docs/images/statistics.png)`
+<img width="1742" height="565" alt="voting-api" src="https://github.com/user-attachments/assets/01407482-e488-4613-b4eb-7730a4d830b0" />
 
 ## Autenticación JWT
 
