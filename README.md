@@ -22,24 +22,15 @@ alembic/                 # Migraciones de la base de datos
 ## Ejecutar localmente
 
 ```bash
-# 1. Entorno virtual y dependencias
 python -m venv .venv
-source .venv/bin/activate          # Git Bash: source .venv/Scripts/activate
+source .venv/bin/activate
 pip install -r requirements.txt
-
-# 2. Variables de entorno (solo la primera vez)
-cp -n .env.example .env
-
-# 3. Crear usuario y base de datos en PostgreSQL (solo la primera vez)
+cp .env.example .env
 psql -U postgres -c "CREATE USER voting_user WITH PASSWORD 'voting_pass';"
 psql -U postgres -c "CREATE DATABASE voting_db OWNER voting_user;"
-
-# 4. Crear las tablas
 alembic upgrade head
-
-# 5. Iniciar la API
 uvicorn app.main:app --reload
-
+```
 - Swagger UI: http://localhost:8000/docs
 - ReDoc: http://localhost:8000/redoc
 
