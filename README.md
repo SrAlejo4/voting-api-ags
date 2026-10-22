@@ -20,6 +20,7 @@ alembic/                 # Migraciones de la base de datos
 ```
 
 ## Ejecutar localmente
+Abrir una terminal bash (Git Bash u otra) y ejecutar el siguiente comando (todas las lineas en la misma ejecución) en el directorio del proyecto. Este ejecutará la API localmente, a la cual se puede acceder con los URL's para el Swagger UI y creará la base de datos PostgreSQL (Pedirá clave de accceso del PostgreSQL local).
 
 ```bash
 python -m venv .venv
@@ -32,8 +33,6 @@ alembic upgrade head
 uvicorn app.main:app --reload
 ```
 - Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
-
 
 ## Endpoints
 
